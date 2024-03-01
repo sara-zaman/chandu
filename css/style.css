@@ -1,0 +1,275 @@
+/* == common css starts == */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========= */
+.container {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+.logo {
+  margin: 10px 0px;
+}
+.banner {
+  background-color: #82b5ca;
+  padding: 20px 0px;
+}
+.banner-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+/* form */
+.form-part {
+  background-color: #dce6eb8c;
+  margin: 60px 0px;
+  border-radius: 20px;
+  padding: 60px 20px 30px;
+}
+.country-container,
+.lia-all-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.cash-all-input,
+.silver-all-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.field {
+  padding: 10px;
+  margin: 10px;
+}
+.field select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 0;
+}
+.field input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 0;
+}
+#calculateButton {
+  padding: 16px 24px;
+  background-color: #82b5ca;
+  color: black;
+  border: 0;
+  border-radius: 50px;
+  font-weight: bolder;
+  width: 40%;
+  margin: 0 auto;
+  display: inherit;
+  margin-top: 40px !important;
+}
+
+/* modal */
+#myModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#zakatResult {
+  text-align: center;
+}
+/* ============ */
+/* == common css ends == */
+body {
+  /* font-family: Garamond, serif;
+  background-image: url("kuku.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column; Added for vertical alignment */
+}
+
+/* .container {
+  background: linear-gradient(0.25turn, #fdffae, #e9ffc2, #c3edc0);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px; 
+} 
+*/
+/* .heading {
+  font-family: Sofia, sans-serif;
+  text-align: center;
+} */
+
+/* h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+} */
+
+/*===================
+.faq {
+  margin: 10px 20px 30px 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 14px 1px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.section-heading {
+  font-family: "Trirong", serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.subsection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subsection label {
+  width: 45%;
+}
+
+.subsection input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  margin: auto;
+  padding: 20px 47px 25px 46px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#myModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#zakatResult {
+  text-align: center;
+}
+*/
+/* .glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 0.5s ease-in-out infinite alternate;
+} */
+
+/* @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px black, 0 0 40px pink,
+      0 0 50px yellow, 0 0 60px black, 0 0 70px red;
+  }
+
+  to {
+    text-shadow: 0 0 20px #c3edc0, 0 0 30px #35a29f, 0 0 40px red,
+      0 0 50px #0079ff, 0 0 60px violet, 0 0 70px #40128b, 0 0 80px #ff4da6;
+  }
+} */

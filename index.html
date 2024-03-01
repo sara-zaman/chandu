@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- google fonts -->
+
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- responsive file -->
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <div class="">
+      <!-- logo -->
+      <!-- <div class="logo text-center">
+        <a href="index.html">
+          <img src="kkk.PNG" alt="Your Logo" />
+        </a>
+      </div> -->
+      <!-- banner -->
+      <section class="banner">
+        <div class="container">
+          <div class="row banner-row">
+            <div class="left-banner">
+              <h2 class="heading glow">Welcome To Ramadan Zakat Calculator!</h2>
+              <p style="color: black; text-align: justify">
+                Zakat is the 3rd Pillar of Islam and a way to attain internal
+                supplication. In Islamic Shariya, Zakat is obligatory when a
+                certain amount of money, called the Nisab (نِصاب), is reached or
+                exceeded. The Nisab was set by Prophet Muhammad (peace be upon
+                him) at a rate equivalent to: 87.48 grams of gold and 612.36
+                grams of silver. Zakat is calculated as 2.5% of the total wealth
+                after subtracting your liabilities.<br /><br /><b
+                  >Calculate your Zakat easily and accurately with our simple,
+                  easy-to-use and user-friendly Zakat calculator. Enter your
+                  financial details below to get started.</b
+                >
+              </p>
+            </div>
+            <div class="right-banner">
+              <img class="img-fluid" src="banner.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <section class="zakat-count-section">
+        <div class="container">
+          <div class="form-part">
+            <!--  -->
+            <form id="zakatForm">
+              <!-- country selection -->
+              <div class="country-container">
+                <div class="field">
+                  <label for="countrySelect">Select Your Country:</label>
+                  <select id="countrySelect">
+                    <option value="" disabled selected>
+                      Select Your Country
+                    </option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="USA">USA</option>
+                    <option value="Europe">Europe</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="currency">Currency:</label>
+                  <input type="text" id="currency" readonly />
+                </div>
+                <div class="field">
+                  <label for="nisab">Nisab:</label>
+                  <input type="number" id="nisab" readonly />
+                </div>
+              </div>
+              <!-- country selection ends -->
+              <!-- cash -->
+              <div class="cash-container">
+                <div class="field">
+                  <h2 class="section-heading text-center">Cash</h2>
+                  <div class="subsection">
+                    <div class="cash-all-input">
+                      <div class="cash-input">
+                        <label for="cashInHome">Cash in Home & Banks:</label>
+                        <input
+                          type="number"
+                          id="cashInHome"
+                          placeholder="Enter amount of cash in home & banks"
+                        />
+                      </div>
+                      <div class="cash-input">
+                        <label for="cashForFuture"
+                          >Deposited Cash(e.g., wedding, hajj):</label
+                        >
+                        <input
+                          type="number"
+                          id="cashForFuture"
+                          placeholder="Enter cash deposited for future"
+                        />
+                      </div>
+                      <div class="cash-input">
+                        <label for="cashForInvestments"
+                          >Cash In Investments Or Pensions:</label
+                        >
+                        <input
+                          type="number"
+                          id="cashForInvestments"
+                          placeholder="Enter cash given for investments or pensions"
+                        />
+                      </div>
+                      <div class="cash-input">
+                        <label for="cashForLoans">Cash Given As loans:</label>
+                        <input
+                          type="number"
+                          id="cashForLoans"
+                          placeholder="Enter cash given as loans"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- cash ends -->
+              <!-- sliver and gold  -->
+              <div class="field">
+                <h2 class="section-heading text-center">Silver and Gold</h2>
+                <div class="subsection">
+                  <div class="silver-all-input">
+                    <div class="silver-input">
+                      <label for="silverValue"
+                        >Currency Value Of Silver You Have:</label
+                      >
+                      <input
+                        type="number"
+                        id="silverValue"
+                        placeholder="Enter currency value of silver you have"
+                      />
+                    </div>
+                    <div class="silver-input">
+                      <label for="goldValue"
+                        >Currency Value Of Gold You Have:</label
+                      >
+                      <input
+                        type="number"
+                        id="goldValue"
+                        placeholder="Enter currency value of gold you have"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- silver and gold ends -->
+              <!-- stock -->
+              <div class="field">
+                <h2 class="section-heading text-center">Zakat from Stock</h2>
+                <div class="subsection">
+                  <label for="stockValue"
+                    >Stock Property Amount (if any):</label
+                  >
+                  <input
+                    type="number"
+                    id="stockValue"
+                    placeholder="Enter currency value of stock you have"
+                  />
+                </div>
+              </div>
+              <!-- stock ends -->
+              <!-- liabilities -->
+              <div class="field">
+                <h2 class="section-heading text-center">Liabilities</h2>
+                <div class="subsection">
+                  <div class="lia-all-input">
+                    <div class="lia-input">
+                      <label for="taxBillsRent"
+                        >Tax, Utility Bills, Rent:</label
+                      >
+                      <input
+                        type="number"
+                        id="taxBillsRent"
+                        placeholder="Enter tax, utility bills, rent"
+                      />
+                    </div>
+                    <div class="lia-input">
+                      <label for="employeeSalaries"
+                        >Salary You Give To Your Employees:</label
+                      >
+                      <input
+                        type="number"
+                        id="employeeSalaries"
+                        placeholder="Enter salary you give to your employees"
+                      />
+                    </div>
+                    <div class="lia-input">
+                      <label for="borrowedMoney"
+                        >Amount Of Any Due Property:</label
+                      >
+                      <input
+                        type="number"
+                        id="borrowedMoney"
+                        placeholder="Enter borrowed money or amount of due property"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- liability ends -->
+              <button type="button" id="calculateButton">
+                Calculate Zakat
+              </button>
+            </form>
+            <!--  -->
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="zakatResult"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--<div class="logo">-->
+      <!-- <img
+      class="logo"
+      style="
+        text-align: center;
+        margin-bottom: 20px;
+        max-width: 100%;
+        height: auto;
+      "
+      src="kkk.PNG"
+      alt="Your Logo"
+    /> -->
+      <!--</div>-->
+
+      <!-- <div class="above-fold-content">-->
+      <!-- <h2 class="heading glow">Welcome To Ramadan Zakat Calculator!</h2> -->
+
+      <!--  </div>-->
+
+      <!-- <div class="container">
+        <h1>Zakat Calculator</h1>
+        <p style="color: black; text-align: justify">
+          Zakat is the 3rd Pillar of Islam and a way to attain internal
+          supplication. In Islamic Shariya, Zakat is obligatory when a certain
+          amount of money, called the Nisab (نِصاب), is reached or exceeded. The
+          Nisab was set by Prophet Muhammad (peace be upon him) at a rate
+          equivalent to: 87.48 grams of gold and 612.36 grams of silver. Zakat
+          is calculated as 2.5% of the total wealth after subtracting your
+          liabilities.<br /><br /><b
+            >Calculate your Zakat easily and accurately with our simple,
+            easy-to-use and user-friendly Zakat calculator. Enter your financial
+            details below to get started.</b
+          >
+        </p>
+        <form id="zakatForm">
+          <div class="field">
+            <label for="countrySelect">Select Your Country:</label>
+            <select id="countrySelect">
+              <option value="" disabled selected>Select Your Country</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="USA">USA</option>
+              <option value="Europe">Europe</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="currency">Currency:</label>
+            <input type="text" id="currency" readonly />
+          </div>
+          <div class="field">
+            <label for="nisab">Nisab:</label>
+            <input type="number" id="nisab" readonly />
+          </div>
+          <div class="field">
+            <h2 class="section-heading">Cash</h2>
+            <div class="subsection">
+              <label for="cashInHome">Cash in Home & Banks:</label>
+              <input
+                type="number"
+                id="cashInHome"
+                placeholder="Enter amount of cash in home & banks"
+              />
+              <label for="cashForFuture"
+                >Deposited Cash(e.g., wedding, hajj):</label
+              >
+              <input
+                type="number"
+                id="cashForFuture"
+                placeholder="Enter cash deposited for future"
+              />
+              <label for="cashForInvestments"
+                >Cash In Investments Or Pensions:</label
+              >
+              <input
+                type="number"
+                id="cashForInvestments"
+                placeholder="Enter cash given for investments or pensions"
+              />
+              <label for="cashForLoans">Cash Given As loans:</label>
+              <input
+                type="number"
+                id="cashForLoans"
+                placeholder="Enter cash given as loans"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <h2 class="section-heading">Silver and Gold</h2>
+            <div class="subsection">
+              <label for="silverValue"
+                >Currency Value Of Silver You Have:</label
+              >
+              <input
+                type="number"
+                id="silverValue"
+                placeholder="Enter currency value of silver you have"
+              />
+              <label for="goldValue">Currency Value Of Gold You Have:</label>
+              <input
+                type="number"
+                id="goldValue"
+                placeholder="Enter currency value of gold you have"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <h2 class="section-heading">Zakat from Stock</h2>
+            <div class="subsection">
+              <label for="stockValue">Stock Property Amount (if any):</label>
+              <input
+                type="number"
+                id="stockValue"
+                placeholder="Enter currency value of stock you have"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <h2 class="section-heading">Liabilities</h2>
+            <div class="subsection">
+              <label for="taxBillsRent">Tax, Utility Bills, Rent:</label>
+              <input
+                type="number"
+                id="taxBillsRent"
+                placeholder="Enter tax, utility bills, rent"
+              />
+              <label for="employeeSalaries"
+                >Salary You Give To Your Employees:</label
+              >
+              <input
+                type="number"
+                id="employeeSalaries"
+                placeholder="Enter salary you give to your employees"
+              />
+              <label for="borrowedMoney">Amount Of Any Due Property:</label>
+              <input
+                type="number"
+                id="borrowedMoney"
+                placeholder="Enter borrowed money or amount of due property"
+              />
+            </div>
+          </div>
+          <button type="button" id="calculateButton">Calculate Zakat</button>
+        </form>
+      </div>
+      <div class="faq">
+        <h2>FAQ</h2>
+        <h3>How can I calculate my Zakat?</h3>
+        <p style="font-size: 20px">
+          Firstly find out your networth, which is the total wealth that you've
+          as cash, given as loans, deposited wealth, gold, silver or anything as
+          stock. Then subtract your liabilities from the networth and find out
+          the Nisab amount for your country for the particular lunar year. If
+          your total wealth exceeds or reaches nisab, then multiply your total
+          wealth by 0.025, that's your payable zakat amount. If your wealth is
+          lower than nisab, then you don't need to pay zakat. However, the nisab
+          amount varies every year for every country, so it's always a good
+          practice to double check the nisab value.
+        </p>
+        <h3>Is Zakat always 2.5 percent?</h3>
+        <p style="font-size: 20px">
+          Yes, adult muslims who're eligible to pay zakat need to find out 2.5%
+          of their wealth, the result is equivalent to the zakat they need to
+          pay once a year. However, to be eligible to pay zakat, you must ensure
+          that your networth reaches the minimum threshold, which is essentially
+          the nisab.
+        </p>
+      </div> -->
+      <!-- Modal -->
+      <!-- <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="zakatResult"></div>
+        </div>
+      </div> -->
+    </div>
+    <!-- jquery main file -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
